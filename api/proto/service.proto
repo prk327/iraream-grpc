@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package gendbapi;
+
+option go_package = "../gen";
+
+service MyService {
+  rpc GetData (Request) returns (Response);
+}
+
+message Request {
+  string query = 1;
+}
+
+message Response {
+  string data = 1;
+}
